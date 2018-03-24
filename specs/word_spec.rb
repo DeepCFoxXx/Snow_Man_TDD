@@ -16,4 +16,9 @@ class WordTest < MiniTest::Test
     assert(@word.include?('t'))
   end
 
+  def test_reveals_letters
+    revealed_t = @word.display(['t'])
+    assert_equal("t**t", revealed_t)
+  end
+
 end
