@@ -21,4 +21,10 @@ class GameTest < MiniTest::Test
     assert_equal(["t"], @game.guessed_letters)
   end
 
+  def test_guess_letter__duplicates_dont_count
+    @game.guess("t")
+    @game.guess("t")
+    assert_equal(["t"], @game.guessed_letters)
+  end
+
 end
