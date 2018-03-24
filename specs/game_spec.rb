@@ -32,4 +32,8 @@ class GameTest < MiniTest::Test
     assert_equal("t**t", @game.reveal_word)
   end
 
+  def test_game_is_lost__false_at_start
+    refute(@game.is_lost?)
+  end
+
 end

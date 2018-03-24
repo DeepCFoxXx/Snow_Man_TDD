@@ -17,4 +17,8 @@ class Game
     @word.display(@guessed_letters)
   end
 
+  def is_lost?()
+    return @player.lives <= 0
+  end
+
 end
