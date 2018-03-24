@@ -36,4 +36,15 @@ class GameTest < MiniTest::Test
     refute(@game.is_lost?)
   end
 
+  def test_game_is_lost__true_after_six_fails
+    @game.guess("a")
+    @game.guess("b")
+    @game.guess("c")
+    @game.guess("d")
+    @game.guess("f")
+    refute(@game.is_lost?)
+    @game.guess("g")
+    assert(@game.is_lost?)
+  end
+
 end

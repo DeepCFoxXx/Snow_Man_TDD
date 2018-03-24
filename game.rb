@@ -21,4 +21,8 @@ class Game
     return @player.lives <= 0
   end
 
+  def lives_remaining()
+    return @player.lives
+  end
+
 end
