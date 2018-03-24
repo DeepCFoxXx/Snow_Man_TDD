@@ -16,4 +16,9 @@ class GameTest < MiniTest::Test
     assert_equal([], @game.guessed_letters)
   end
 
+  def test_guess_letter
+    @game.guess("t")
+    assert_equal(["t"], @game.guessed_letters)
+  end
+
 end
