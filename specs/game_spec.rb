@@ -47,4 +47,8 @@ class GameTest < MiniTest::Test
     assert(@game.is_lost?)
   end
 
+  def test_game_is_won__false_at_start
+    refute(@game.is_won?)
+  end
+
 end

@@ -25,4 +25,8 @@ class Game
     return @player.lives
   end
 
+  def is_won?()
+    return !reveal_word().include?("*")
+  end
+
 end
