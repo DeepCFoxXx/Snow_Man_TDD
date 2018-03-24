@@ -16,4 +16,8 @@ class Word
     return displayed_word
   end
 
+  def include?(letter)
+    return @hidden_word.include?(letter)
+  end
+
 end

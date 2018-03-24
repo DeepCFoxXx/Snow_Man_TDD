@@ -12,4 +12,8 @@ class WordTest < MiniTest::Test
     assert_equal("****", @word.display)
   end
 
+  def test_word_includes_letter
+    assert(@word.include?('t'))
+  end
+
 end
