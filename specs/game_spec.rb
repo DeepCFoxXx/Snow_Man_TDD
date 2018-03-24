@@ -27,4 +27,9 @@ class GameTest < MiniTest::Test
     assert_equal(["t"], @game.guessed_letters)
   end
 
+  def test_reveal_word
+    @game.guess("t")
+    assert_equal("t**t", @game.reveal_word)
+  end
+
 end

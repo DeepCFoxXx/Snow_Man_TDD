@@ -13,4 +13,8 @@ class Game
     @player.lose_life() unless @word.include?(letter)
   end
 
+  def reveal_word()
+    @word.display(@guessed_letters)
+  end
+
 end
