@@ -16,4 +16,9 @@ class PlayerTest < MiniTest::Test
     assert_equal(6, @player.lives)
   end
 
+  def test_can_lose_a_life
+    @player.lose_life
+    assert_equal(5, @player.lives)
+  end
+
 end
