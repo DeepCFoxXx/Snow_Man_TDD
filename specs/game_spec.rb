@@ -51,4 +51,13 @@ class GameTest < MiniTest::Test
     refute(@game.is_won?)
   end
 
+
+  def test_game_is_won__true
+    @game.guess("t")
+    @game.guess("e")
+    refute(@game.is_won?)
+    @game.guess("s")
+    assert(@game.is_won?)
+  end
+
 end
